@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InternLink - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-white font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-dark group/design-root overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#222f49] bg-background-dark/80 px-4 sm:px-6 lg:px-10 py-3 backdrop-blur-sm">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">InternLink</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Find Internships</a>
+<a class="text-[#90a4cb] text-sm font-medium leading-normal hover:text-white transition-colors" href="userdashboard.html#my-applications">My Applications</a>
+<a class="text-[#90a4cb] text-sm font-medium leading-normal hover:text-white transition-colors" href="#">Resources</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4 md:gap-6">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#90a4cb] flex border-none bg-[#222f49] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#222f49] focus:border-none h-full placeholder:text-[#90a4cb] px-4 pl-2 text-base font-normal leading-normal" placeholder="Search" value="Software Engineer"/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="hidden lg:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Post Internship</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#222f49] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-[#314368] transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture of Jordan Smith" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiIhZqfZZkY8uCAbXz6gRJdpGTcON6XtdbRoO96Hay6ZyQT6JQAmLBrjYREbJ1XG9m1nlisAqTme7pJs9Rwt72d8e0ikP_eSFawLvN4f1FH7X2kpv_5r4DZF2zk4wzoKWrfbG8XblGnrUzGCH6eyhsbLV1NpM_KwU0Bj-3WA1wchSVuUUsg4jW2AIXNH6O3Fd8qwqsRl8BOAsCEssLqoAnjbs9mSYVe2cAzsGULipxi2WZX15HsF3uiK6CiLYcct3PVJzvHIPmZD0");'></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-10 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sticky Sidebar -->
+<aside class="w-full lg:w-1/4 lg:max-w-xs top-24 lg:sticky self-start">
+<div class="flex flex-col gap-4 bg-[#1a2338] p-4 rounded-xl border border-[#222f49]">
+<h3 class="text-white text-lg font-bold">Filters</h3>
+<!-- Accordions -->
+<div class="flex flex-col">
+<details class="flex flex-col border-t border-t-[#314368] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-white text-sm font-medium leading-normal">Pay</p>
+<span class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-[#90a4cb] text-sm">Paid</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-[#90a4cb] text-sm">Unpaid</span>
+</label>
+<!-- Slider -->
+<div class="relative flex w-full flex-col items-start justify-between gap-3 pt-4">
+<div class="flex h-[38px] w-full pt-1.5">
+<div class="flex h-1 w-full rounded-sm bg-[#314368] pl-[10%] pr-[25%]">
+<div class="relative">
+<div class="absolute -left-3 -top-1.5 flex flex-col items-center gap-1">
+<div class="size-4 rounded-full bg-primary cursor-pointer"></div>
+<p class="text-white text-xs font-normal leading-normal">$20/hr</p>
+</div>
+</div>
+<div class="h-1 flex-1 rounded-sm bg-primary"></div>
+<div class="relative">
+<div class="absolute -left-3 -top-1.5 flex flex-col items-center gap-1">
+<div class="size-4 rounded-full bg-primary cursor-pointer"></div>
+<p class="text-white text-xs font-normal leading-normal">$75/hr</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-[#314368] py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-white text-sm font-medium leading-normal">Type</p>
+<span class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-white text-sm">Full-Time</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-[#90a4cb] text-sm">Part-Time</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-[#90a4cb] text-sm">Remote</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox bg-[#314368] border-[#90a4cb] rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-[#90a4cb] text-sm">On-site</span>
+</label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-[#314368] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-white text-sm font-medium leading-normal">Industry</p>
+<span class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="text-[#90a4cb] text-sm font-normal leading-normal pb-2 pt-2">Industry checkboxes go here.</p>
+</details>
+<details class="flex flex-col border-t border-t-[#314368] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-white text-sm font-medium leading-normal">Date Posted</p>
+<span class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-radio bg-[#314368] border-[#90a4cb] text-primary focus:ring-primary" name="date_posted" type="radio"/>
+<span class="text-[#90a4cb] text-sm">Last 24 hours</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-radio bg-[#314368] border-[#90a4cb] text-primary focus:ring-primary" name="date_posted" type="radio"/>
+<span class="text-[#90a4cb] text-sm">Last 7 days</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-radio bg-[#314368] border-[#90a4cb] text-primary focus:ring-primary" name="date_posted" type="radio"/>
+<span class="text-[#90a4cb] text-sm">Last 30 days</span>
+</label>
+</div>
+</details>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 mt-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Apply Filters</span>
+</button>
+</div>
+</aside>
+<!-- Results Section -->
+<section class="w-full lg:w-3/4">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4 mb-6">
+<p class="text-white tracking-light text-2xl sm:text-3xl font-bold leading-tight min-w-72">Showing 128 results for 'Software Engineer'</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 gap-2 bg-[#222f49] text-white text-sm font-medium leading-normal hover:bg-[#314368] transition-colors">
+<span class="truncate">Sort by: Relevance</span>
+<span class="material-symbols-outlined text-xl">arrow_drop_down</span>
+</button>
+</div>
+<!-- Internship Cards -->
+<div class="flex flex-col gap-4">
+<!-- Internship Card 1 -->
+<a href="internshipdetail.html" class="flex flex-col sm:flex-row gap-4 p-5 bg-[#1a2338] rounded-xl border border-[#222f49] hover:border-primary transition-colors cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 flex-shrink-0" data-alt="Stripe company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9k5OIdWWjxKzpZjBp6ZwHlMai9ffKqQZOJ7fkT4KmU6gKWbFneyu4tO9rYnFDV8BZHYCN87ATof8V51QHhQNaRKHkrddWzLaTsTglYUVnJ2j6W3baoiju-J8ywVaFaVy4BOWLF9Xlolb6A0hlnX2ugqgnSKfWu91veNCu3e-UdTbhKTHP85ZWanQ8rW26_QhOjW28TqKffn3_hkNHwPAutwuYVUfmDHJBTpRMIbAmP5VukhUvMaCb0Wfd7nHQneks223aO6IA2Xs");'></div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-medium text-[#90a4cb]">Stripe</p>
+<h3 class="text-lg font-bold text-white mt-1">Software Engineering Intern</h3>
+<p class="text-sm text-[#90a4cb] mt-1">San Francisco, CA • $45/hr</p>
+</div>
+<button class="p-2 text-[#90a4cb] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Remote Option</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Full-Time</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Backend</span>
+</div>
+</div>
+</a>
+<!-- Internship Card 2 -->
+<a href="internshipdetail.html" class="flex flex-col sm:flex-row gap-4 p-5 bg-[#1a2338] rounded-xl border border-[#222f49] hover:border-primary transition-colors cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 flex-shrink-0" data-alt="Figma company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAA4UtnE5V_My8bmZkgEepP46-hnijCJKaLt6P04yccgSoGeLZswn0OFM7068IIshN-IAM2BpcMaGOUTtlA3cnzq94ryqmSqGQAlXwz50wmwsu0Ro-cMI3uf8WJyjKBMZ-TUQdn8VGR8Z09EM9P2U7hVTGqgGZA54tkr2yOBlNOXslnoPKq0yiQG4X2jlgsyIuRmsqAPj0Oad9KUVb_bnFENa2pjXxZM3EgdtVP-oKgr2zlwvRVqGOtaWxSWbzL8BnxrvFMTAXCK-A");'></div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-medium text-[#90a4cb]">Figma</p>
+<h3 class="text-lg font-bold text-white mt-1">Product Design Intern, Summer 2024</h3>
+<p class="text-sm text-[#90a4cb] mt-1">New York, NY • Competitive</p>
+</div>
+<button class="p-2 text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">On-site</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Full-Time</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">UI/UX</span>
+</div>
+</div>
+</a>
+<!-- Internship Card 3 -->
+<a href="internshipdetail.html" class="flex flex-col sm:flex-row gap-4 p-5 bg-[#1a2338] rounded-xl border border-[#222f49] hover:border-primary transition-colors cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 flex-shrink-0" data-alt="Notion company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9SrHjfjGYKr8ZGhxAP_YMFSMW6OU3MyeVdJ-bxmAVHpfpWX5ttCSKbsTF3m2PzVV60hOCiKY7r-eXxSj7EB7TdCmA9CxkbhojW9MOzF6I64AD4iY0iTEkfsUFHffHbyYQDtPKtUOOQw0XCj62peL_L6geRHYUEJIbx91Fz1cspt85RtEHT8NiCR9h6wwO4y3k78381sQKVPESDQGlSrwGlai3oVUYrml-JYI54LET1N39o-fwyU8umozlayAThtNoLyFStvxVNJU");'></div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-medium text-[#90a4cb]">Notion</p>
+<h3 class="text-lg font-bold text-white mt-1">Frontend Engineer Intern</h3>
+<p class="text-sm text-[#90a4cb] mt-1">Remote • $50/hr</p>
+</div>
+<button class="p-2 text-[#90a4cb] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Remote</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Part-Time</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Frontend</span>
+</div>
+</div>
+</a>
+<!-- Internship Card 4 -->
+<a href="internshipdetail.html" class="flex flex-col sm:flex-row gap-4 p-5 bg-[#1a2338] rounded-xl border border-[#222f49] hover:border-primary transition-colors cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 flex-shrink-0" data-alt="Spotify company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAysOdDWMpJa1dZ5BEu4B1CFSWmE3bIoi6tGZa8bxY6h9GinRehv8g4MCp3wq-4_zIZhy9CZUX39xrnfMjtDdeF3v5aSaWD03us0GwBL2ExHCbxGSJ_HH-pRagWNZ6fL-3uvLoJHxYhUbYv_vQtpNVD2IuqocdLKcWjGmnc4dFu3NfowQwShkQIcCuxmV8YnzgtHsBXaU-aK-sPTBl0_HHNzPDZww9qLXZvpu-I5Q2eez4Iu1zBt55yeRwWA1NkAlEZ9NTw5AE0VvM");'></div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-medium text-[#90a4cb]">Spotify</p>
+<h3 class="text-lg font-bold text-white mt-1">Data Science Intern, Growth</h3>
+<p class="text-sm text-[#90a4cb] mt-1">Stockholm, SE • Competitive</p>
+</div>
+<button class="p-2 text-[#90a4cb] hover:text-primary transition-colors">
+<span class="material-symbols-outlined">bookmark_border</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">On-site</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Full-Time</span>
+<span class="px-3 py-1 text-xs font-medium text-white bg-[#222f49] rounded-full">Data Science</span>
+</div>
+</div>
+</a>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-6">
+<button class="flex items-center justify-center size-9 rounded-lg bg-[#222f49] text-white hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">chevron_left</span>
+</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-primary text-white">1</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-[#222f49] text-white hover:bg-primary transition-colors">2</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-[#222f49] text-white hover:bg-primary transition-colors">3</button>
+<span class="text-[#90a4cb]">...</span>
+<button class="flex items-center justify-center size-9 rounded-lg bg-[#222f49] text-white hover:bg-primary transition-colors">10</button>
+<button class="flex items-center justify-center size-9 rounded-lg bg-[#222f49] text-white hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internship Details - InternLink</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 flex items-center justify-center border-b border-white/10 bg-background-dark/80 px-4 py-3 backdrop-blur-md sm:px-6 lg:px-8">
+<div class="flex w-full max-w-7xl items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">InternLink</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Find Internships</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">My Applications</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Profile</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-primary/90 sm:flex">
+<span class="truncate">Post a Job</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white/20" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzIBZkAcpTRMGRCEs2ou9-XPDBfk0Pei2WGDD6sigkIO232lJgprShy8Lfc5ocqBDcpMivx_4MuMHznHmMKm08oe_LiK4MBbSQ6ceyX1QjfPBoiueX4Li_PVTSN4rMPxaczoKYD73NvnF6A_wN_pEjmFk6kvAOhDogxCum81qNX8eKnBCkyT3d328wlXOu1l1KQKbDguH_hC6Be_iJK19iJUZIZyCJJvN0iokqFF_Ae9wBznBSPkz332Pvws75OLXvV96uNWUt3Dk");'></div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="w-full grow px-4 py-8 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-7xl">
+<!-- Breadcrumbs -->
+<div class="mb-6 flex flex-wrap items-center gap-2">
+<a class="text-slate-400 hover:text-white text-sm font-medium leading-normal transition-colors" href="homepage.html">Home</a>
+<span class="text-slate-500 text-sm font-medium leading-normal">/</span>
+<a class="text-slate-400 hover:text-white text-sm font-medium leading-normal transition-colors" href="search.html">Search Results</a>
+<span class="text-slate-500 text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Software Engineering Intern</span>
+</div>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<!-- Left Column: Internship Details -->
+<div class="flex flex-col gap-8 lg:col-span-2">
+<!-- PageHeading -->
+<div class="flex flex-col gap-4 border-b border-white/10 pb-6">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl">Software Engineering Intern</h1>
+<p class="text-slate-400 text-lg font-normal leading-normal">Stripe • San Francisco, CA • $50/hr - $65/hr</p>
+</div>
+<!-- ButtonGroup -->
+<div class="flex flex-wrap gap-3">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined text-xl">send</span>
+<span class="truncate">Apply Now</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-[#222f49] text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-[#2c3c5c]">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+<span class="truncate">Save</span>
+</button>
+</div>
+<!-- Content Sections -->
+<div class="flex flex-col gap-8 text-slate-300">
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Internship Description</h2>
+<p class="text-base font-normal leading-relaxed">Join Stripe's core infrastructure team to design, build, and maintain the next generation of global payment systems. This is a unique opportunity to work on highly scalable, distributed systems that power millions of businesses worldwide. You will collaborate with experienced engineers to tackle complex challenges in reliability, scalability, and performance, making a direct impact on our product and users.</p>
+</div>
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Responsibilities</h2>
+<ul class="list-disc space-y-2 pl-5">
+<li>Design, develop, and deploy backend services with a focus on high availability, low latency, and scalability.</li>
+<li>Write clean, maintainable, and well-tested code in languages such as Go, Ruby, or Java.</li>
+<li>Collaborate with cross-functional teams including product managers, designers, and other engineers to deliver new features.</li>
+<li>Participate in code reviews to maintain a high-quality code culture.</li>
+<li>Troubleshoot and debug production issues across services and multiple levels of the stack.</li>
+</ul>
+</div>
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Qualifications</h2>
+<ul class="list-disc space-y-2 pl-5">
+<li>Currently pursuing a Bachelor's or Master's degree in Computer Science or a related field.</li>
+<li>Strong understanding of computer science fundamentals, including data structures, algorithms, and software design.</li>
+<li>Experience with one or more general-purpose programming languages (e.g., Python, Java, Go, C++).</li>
+<li>Excellent problem-solving skills and the ability to work independently or as part of a team.</li>
+<li>Familiarity with distributed systems and cloud computing (AWS, GCP, Azure) is a plus.</li>
+</ul>
+</div>
+<div>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">About the Company</h2>
+<p class="text-base font-normal leading-relaxed">Stripe is a technology company that builds economic infrastructure for the internet. Businesses of every size—from new startups to public companies—use our software to accept payments and manage their businesses online. We're on a mission to increase the GDP of the internet, and we believe that by making it easier for entrepreneurs to start, run, and scale their businesses, we can make a meaningful impact on the world.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Sidebar -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 rounded-xl border border-white/10 bg-[#161d2d] p-6">
+<h3 class="text-white text-lg font-bold mb-6">Internship Overview</h3>
+<div class="flex flex-col gap-5 text-sm">
+<div class="flex items-start justify-between">
+<span class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-base">location_on</span>
+                                        Location
+                                    </span>
+<span class="font-medium text-white text-right">San Francisco, CA</span>
+</div>
+<div class="flex items-start justify-between">
+<span class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-base">payments</span>
+                                        Pay
+                                    </span>
+<span class="font-medium text-white text-right">$50/hr - $65/hr</span>
+</div>
+<div class="flex items-start justify-between">
+<span class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-base">schedule</span>
+                                        Duration
+                                    </span>
+<span class="font-medium text-white text-right">12 Weeks (Summer)</span>
+</div>
+<div class="flex items-start justify-between">
+<span class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-base">event_busy</span>
+                                        Apply by
+                                    </span>
+<span class="font-medium text-white text-right">April 15, 2024</span>
+</div>
+</div>
+<div class="mt-8 border-t border-white/10 pt-6">
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined text-xl">send</span>
+<span class="truncate">Apply Now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

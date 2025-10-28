@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InternLink - User Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0d59f2",
+              "background-light": "#f5f6f8",
+              "background-dark": "#101622",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#E0E0E0]">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5 md:px-10 lg:px-40">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#222f49] px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">InternLink</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary" href="homepage.html">Home</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary" href="search.html">Search</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary" href="userdashboard.html">Dashboard</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary" href="#">About</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Post an Internship</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDor1ODPloAdpE_5up4TA6A8yzH1ifNi_L4zKM_2tEm5GGWl7h6IlPDQfcZXbLZgQpY3dOrnIfaz35TotsUoFRNtBYJBPyCve0OXA_yTxIYn4F1i5vDXlX5b0CeXlnBbxYS4vZKg7oZub4XgGx7QRfKx3V4jKKeqNu232Dxfw7PkB-XCc18zDg0W7MVAMoCBB0y30YjBAzVi-Ct5WWSMgIEZboJ_3qMFWG1MmB4eQxXRSgCG5T2o9KPbqQEcSgTYNylgBmN3T19nGY");'></div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+</header>
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 p-4 pt-8">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">User Dashboard</p>
+</div>
+<!-- Tabs -->
+<div class="pb-3 px-4">
+<div class="flex border-b border-[#314368] gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]" id="my-profile">My Profile</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#90a4cb] pb-[13px] pt-4 hover:text-white hover:border-b-white/50" href="#saved-internships">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]" id="saved-internships-tab">Saved Internships</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#90a4cb] pb-[13px] pt-4 hover:text-white hover:border-b-white/50" href="#my-applications">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]" id="my-applications-tab">My Applications</p>
+</a>
+</div>
+</div>
+<!-- Profile Section Content -->
+<div class="flex flex-col gap-8">
+<!-- SectionHeader -->
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Documents &amp; Links</h2>
+<!-- EmptyState for Resume Upload -->
+<div class="flex flex-col px-4">
+<div class="flex flex-col items-center gap-6 rounded-lg border-2 border-dashed border-[#314368] px-6 py-14">
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center">Upload your resume</p>
+<p class="text-[#90a4cb] text-sm font-normal leading-normal max-w-[480px] text-center">Drag and drop your file here, or click to browse. Supports PDF, DOCX.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#222f49] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#314368]">
+<span class="truncate">Upload File</span>
+</button>
+</div>
+</div>
+<!-- Input Fields for Links -->
+<div class="flex flex-col gap-6 p-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-white" for="linkedin-url">LinkedIn URL</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[#90a4cb]"> link </span>
+<input class="w-full rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-3 pl-10 text-white placeholder-[#90a4cb] focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50" id="linkedin-url" placeholder="https://linkedin.com/in/yourprofile" type="url"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium text-white" for="portfolio-url">Portfolio URL</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[#90a4cb]"> language </span>
+<input class="w-full rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-3 pl-10 text-white placeholder-[#90a4cb] focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50" id="portfolio-url" placeholder="https://yourportfolio.com" type="url"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Save Button -->
+<div class="flex justify-end p-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Save Changes</span>
+</button>
+</div>
+<!-- Example Section: Saved Internships (for context) -->
+<div class="mt-12" id="saved-internships">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Saved Internships</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+<!-- Internship Card -->
+<div class="flex flex-col gap-4 rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-5 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white">
+<img alt="Google company logo" class="h-6 w-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuTztps_CB3j0rXgO80jSaVPPxGmX8P4E2csPMmJw7sxJ_QSxzKeTg44YLnAoivUmBvnmntqjao9y3lq2wSCtr0xZ_dU3UMi5M1MxYQWjYkRee4BX-0mlE8Bh1OZosEe8RdYSa4U0Snov0YbS0bBzSYta1OyYOoPZjQ7lPclonBPKRTTyMWDvEHB2guSzNoVAo--F3cX_HyNaOmLk8xbSlNlfVTAB69AzUBqaqcT9eVZH0WbTJvEWJR5JyEnPBjhIqLUGCe20fF-4"/>
+</div>
+<div>
+<p class="text-lg font-bold text-white">Software Engineer Intern</p>
+<p class="text-sm text-[#90a4cb]">Google</p>
+</div>
+</div>
+<button class="text-[#90a4cb] hover:text-primary">
+<span class="material-symbols-outlined"> bookmark </span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-sm text-[#90a4cb]">
+<span class="material-symbols-outlined text-base"> location_on </span>
+<span>Mountain View, CA</span>
+</div>
+</div>
+<!-- Internship Card -->
+<div class="flex flex-col gap-4 rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-5 transition-all hover:border-primary/50">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-4">
+<div class="flex size-12 items-center justify-center rounded-lg bg-white p-1">
+<img alt="Meta company logo" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK7m6unLALbB0CFSMUTo3kALJjebIaPsI701STv5nDX6CrdDpk8GboLWCi4vfJNEECNwQqsIuEPXUH5EaTQJp_Vhb5X2Ntbk34WiXHshFskdDMQhLQfsXXpDxlBaXskTvi5HCqu-Aw5ZcXoFsEOB8Gds0YPJRwqPiV62OxJjC6A5tuqq_CzHiLOT1JCddDSbjbZfu5WU4ABydHo9abd3z_NHwSgCx0T-vSKWncck7rqwei7uDSCaNbrhlcPTC7HKY6-ozI5VaIk0A"/>
+</div>
+<div>
+<p class="text-lg font-bold text-white">Product Design Intern</p>
+<p class="text-sm text-[#90a4cb]">Meta</p>
+</div>
+</div>
+<button class="text-[#90a4cb] hover:text-primary">
+<span class="material-symbols-outlined"> bookmark </span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-sm text-[#90a4cb]">
+<span class="material-symbols-outlined text-base"> location_on </span>
+<span>Menlo Park, CA</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Example Section: My Applications (for context) -->
+<div class="mt-12" id="my-applications">
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">My Applications</h2>
+<div class="flex flex-col gap-2 p-4">
+<!-- Application List Item -->
+<div class="flex items-center justify-between rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-4">
+<div class="flex flex-col">
+<p class="font-bold text-white">UX/UI Design Intern</p>
+<p class="text-sm text-[#90a4cb]">Spotify</p>
+</div>
+<span class="rounded-full bg-yellow-500/20 px-3 py-1 text-xs font-medium text-yellow-300">Applied</span>
+</div>
+<!-- Application List Item -->
+<div class="flex items-center justify-between rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-4">
+<div class="flex flex-col">
+<p class="font-bold text-white">Data Science Intern</p>
+<p class="text-sm text-[#90a4cb]">Netflix</p>
+</div>
+<span class="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300">Interviewing</span>
+</div>
+<!-- Application List Item -->
+<div class="flex items-center justify-between rounded-lg border border-solid border-[#314368] bg-[#1a2337] p-4">
+<div class="flex flex-col">
+<p class="font-bold text-white">Frontend Developer Intern</p>
+<p class="text-sm text-[#90a4cb]">Vercel</p>
+</div>
+<span class="rounded-full bg-red-500/20 px-3 py-1 text-xs font-medium text-red-300">Rejected</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>
